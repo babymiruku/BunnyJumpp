@@ -6,11 +6,13 @@ public class PlayControl : MonoBehaviour
 {
     public float speed = 1.0f;
 
-    Rigidbody2D rigidbody;
+  
+
+    Rigidbody2D rigidbody2d;
 
     private void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        rigidbody2d = GetComponent<Rigidbody2D>();
 
     }
 
@@ -27,8 +29,8 @@ public class PlayControl : MonoBehaviour
         {
             f = new Vector2(-speed,0);
         }
-
-        rigidbody.AddForce(f);
+        
+        rigidbody2d.AddForce(f);
     }
 
 
